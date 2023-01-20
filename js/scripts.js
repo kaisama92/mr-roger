@@ -39,6 +39,13 @@ function countUpTo(number) {
   return joinedTotalArray;
 }
 
+function mrRogersEquation(number) {
+  
+}
 
 //UI Logic
 
+window.addEventListener("load", function() {
+  const form = document.getElementById("number-input");
+  form.addEventListener("submit", mrRogersEquation)
+})
