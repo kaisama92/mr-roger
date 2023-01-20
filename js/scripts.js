@@ -27,6 +27,11 @@ function isNumber1(number) {
   }
 }
 
+function createNumberArray(input) {
+  const numberArray = input.toString().split("");
+  return numberArray;
+}
+
 
 //Business Logic 
 
@@ -35,8 +40,7 @@ function countUpTo(number) {
   for (let currentNumber = 0; currentNumber <= number; currentNumber += 1) {
     totalArray.push(parseInt(currentNumber))
   }
-  const joinedTotalArray = totalArray.join(" ");
-  return joinedTotalArray;
+  return totalArray;
 }
 
 function mrRogersEquation(number) {
@@ -45,14 +49,27 @@ function mrRogersEquation(number) {
   const beep = "Beep!";
   if (isNumber3(number)) {
     return rogersNumber;
-  } else if (isNumber2(number)) {
-    return boop;
   } else 
+  if (isNumber2(number)) {
+    return boop;
+  } else
   if (isNumber1(number)) {
     return beep;
   } else {
     return number;
   }
+}
+
+function mrRogersMultiples(number) {}
+
+
+function theNeighborhood(integer) {
+  const numberArray = countUpTo(integer)
+  const finalNumberArray = [];
+  numberArray.forEach(function (number) {
+    finalNumberArray.push(mrRogersEquation(number));
+  });
+  return finalNumberArray;
 }
 
 //UI Logic

@@ -50,3 +50,18 @@ Test: "It should output 'Beep!' if the number is a 1."
 Code:
 const input = "1"
 Expected Output: "Beep!"
+
+Test: "It should look for 3, 2, or 1 in an array."
+
+# Describe: theNeighborhood()
+
+Test: "It should take an array of numbers that increase by one from 0 to 9 and replace numbers 1, 2, and 3 with their corresponding values in mrRogersEquation().
+Code: theNeighborhood("9")
+Expected Output: [0 Beep! Boop! Won't you be my neighbor? 4 5 6 7 8 9]
+
+# Describe: numberArray()
+
+Test: "It should take a number and turn it into an array."
+Code:
+const input = "12"
+Expected Output: [1, 2]
