@@ -3,6 +3,22 @@ function returnInput(number) {
   return parseInt(number);
 }
 
+function isNegative(number) {
+  if (number < 0) {
+    return true; 
+  } else {
+  return false;
+  };
+}
+
+function isSingleDigit(number) {
+  if (number < 10 && number >= 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
 function isNumber3(number) {
   if (parseInt(number) === 3) {
     return true;
@@ -64,12 +80,22 @@ function mrRogersMultiples(number) {}
 
 
 function theNeighborhood(integer) {
-  const numberArray = countUpTo(integer)
-  const finalNumberArray = [];
-  numberArray.forEach(function (number) {
-    finalNumberArray.push(mrRogersEquation(number));
-  });
-  return finalNumberArray;
+  if (isNegative(integer)) {
+    return "Please Enter a Number Greater Than 0."
+  } else {
+    const numberArray = countUpTo(integer)
+    const finalNumberArray = [];
+    numberArray.forEach(function (number) {
+      if (isSingleDigit(number)) {
+        finalNumberArray.push(mrRogersEquation(number));
+      } else{
+        let bigNumberArray = createNumberArray(number)
+        bigNumberArray.forEach(function (elment) {
+          
+        }
+      }});
+    return finalNumberArray;
+  }
 }
 
 //UI Logic

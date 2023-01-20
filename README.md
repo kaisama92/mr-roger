@@ -34,6 +34,25 @@ Code:
 const input = "1"
 Expected Output: true
 
+# Describe: isSingleDigit()
+
+Test: "It should recognize numbers < 10."
+Code: 
+const input = 10
+Expected Output: false
+
+Test: "It should only recognize numbers >= 0 and numbers < 10."
+Code: 
+let input = -1
+Expected Output: false
+let input = 5
+Expected Output: true
+
+# Describe: isNegative()
+Test: "It should return "Please Enter a Number Greater than 0."
+Code: 
+const input = "-1"
+Expected Output: "Please Enter a Number Greater than 0."
 # Describe: mrRogersEquation()
 
 Test: "It should output 'Won't you be my neighbor?' if the number is a 3."
