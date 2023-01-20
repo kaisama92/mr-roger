@@ -90,13 +90,22 @@ function theNeighborhood(integer) {
         finalNumberArray.push(mrRogersEquation(number));
       } else{
         let bigNumberArray = createNumberArray(number)
-        bigNumberArray.forEach(function (elment) {
-          
+        if (bigNumberArray.includes(3)) {
+          finalNumberArray.push(mrRogersEquation(3));
+        } else 
+        if (bigNumberArray.includes(2)) {
+          finalNumberArray.push(mrRogersEquation(2));
+        } else if (bigNumberArray.includes(1)) {
+          finalNumberArray.push(mrRogersEquation(1));
+        } else {
+          finalNumberArray.push(number);
         }
-      }});
-    return finalNumberArray;
+        }
+      });
+      return finalNumberArray;
+    };
   }
-}
+
 
 //UI Logic
 
