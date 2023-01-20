@@ -19,6 +19,7 @@ Code:
 const input = "3"
 Expected Output: true
 
+
 # Describe: isNumber2()
 
 Test: "It should recognize the number 2."
@@ -33,3 +34,19 @@ Code:
 const input = "1"
 Expected Output: true
 
+# Describe: mrRogersEquation()
+
+Test: "It should output 'Won't you be my neighbor?' if the number is a 3."
+Code:
+const input = "3"
+Expected Output: "Won't you be my neighbor?"
+
+Test: "It should output 'Boop!' if the number is a 2."
+Code: 
+const input = "2"
+Expected Output: "Boop!"
+
+Test: "It should output 'Beep!' if the number is a 1."
+Code:
+const input = "1"
+Expected Output: "Beep!"

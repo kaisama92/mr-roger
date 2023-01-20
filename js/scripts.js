@@ -40,7 +40,19 @@ function countUpTo(number) {
 }
 
 function mrRogersEquation(number) {
-  
+  const rogersNumber = "Won't you be my neighbor?";
+  const boop = "Boop!";
+  const beep = "Beep!";
+  if (isNumber3(number)) {
+    return rogersNumber;
+  } else if (isNumber2(number)) {
+    return boop;
+  } else 
+  if (isNumber1(number)) {
+    return beep;
+  } else {
+    return number;
+  }
 }
 
 //UI Logic
