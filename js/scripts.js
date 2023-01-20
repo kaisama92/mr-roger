@@ -76,7 +76,9 @@ function mrRogersEquation(number) {
   }
 }
 
-function theNeighborhood(integer) {
+function theNeighborhood(event) {
+  event.preventDefault();
+  let integer = document.querySelector("input#numberInput");
   if (isNegative(integer)) {
     return "Please Enter a Number Greater Than 0."
   } else {
@@ -108,5 +110,6 @@ function theNeighborhood(integer) {
 
 window.addEventListener("load", function() {
   const form = document.getElementById("number-input");
-  form.addEventListener("submit", mrRogersEquation)
+  form.addEventListener("submit", theNeighborhood);
+  
 })
