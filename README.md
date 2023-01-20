@@ -78,6 +78,34 @@ Test: "It should take an array of numbers that increase by one from 0 to 9 and r
 Code: theNeighborhood("9")
 Expected Output: [0 Beep! Boop! Won't you be my neighbor? 4 5 6 7 8 9]
 
+Test: "It should take any number > 9 and output an array with a number of elements equal to the number of digits in the number. 
+Code:
+let input = 123;
+Expected Output: [1, 2, 3]
+let input = 14;
+Expected Output: [1, 4]
+
+Test: "It should output 'Won't you be my neighbor?' if a digit > 9 includes a '3'."
+Code:
+let input = "13"
+Expected Output: 'Won't you be my neighbor?'
+let input = "32"
+Expected Output: Won't you be my neighbor?'
+
+Test: "It should output 'Boop!' if a digit > 9 includes a '2' and no '3'."
+Code:
+let input = "12"
+Expected Output: "Boop!"
+let input = "21"
+Expected Output: "Boop!"
+
+Test: "It should output 'Beep!' if a digit > 9 includes a '1' and no '2' or '3'."
+Code: 
+let input = "14"
+Expected Output: "Beep!"
+let input = "41"
+Expected Output: "Beep!"
+
 # Describe: numberArray()
 
 Test: "It should take a number and turn it into an array."

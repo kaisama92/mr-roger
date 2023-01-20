@@ -76,9 +76,6 @@ function mrRogersEquation(number) {
   }
 }
 
-function mrRogersMultiples(number) {}
-
-
 function theNeighborhood(integer) {
   if (isNegative(integer)) {
     return "Please Enter a Number Greater Than 0."
@@ -90,13 +87,13 @@ function theNeighborhood(integer) {
         finalNumberArray.push(mrRogersEquation(number));
       } else{
         let bigNumberArray = createNumberArray(number)
-        if (bigNumberArray.includes(3)) {
-          finalNumberArray.push(mrRogersEquation(3));
+        if (bigNumberArray.includes("3")) {
+          finalNumberArray.push(mrRogersEquation("3"));
         } else 
-        if (bigNumberArray.includes(2)) {
-          finalNumberArray.push(mrRogersEquation(2));
-        } else if (bigNumberArray.includes(1)) {
-          finalNumberArray.push(mrRogersEquation(1));
+        if (bigNumberArray.includes("2")) {
+          finalNumberArray.push(mrRogersEquation("2"));
+        } else if (bigNumberArray.includes("1")) {
+          finalNumberArray.push(mrRogersEquation("1"));
         } else {
           finalNumberArray.push(number);
         }
