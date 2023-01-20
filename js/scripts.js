@@ -1,8 +1,4 @@
 //Utility Logic
-function returnInput(number) {
-  return parseInt(number);
-}
-
 function isNegative(number) {
   if (number < 0) {
     return true; 
@@ -76,7 +72,9 @@ function mrRogersEquation(number) {
   }
 }
 
-function theNeighborhood(event) {
+//UI Logic
+
+function handleTheNeighborhood(event) {
   event.preventDefault();
   let integer = document.querySelector("input#numberInput");
   if (isNegative(integer)) {
@@ -101,15 +99,13 @@ function theNeighborhood(event) {
         }
         }
       });
-      return finalNumberArray;
+      const pElement = document.createElement("p");
+      pElement.append(finalNumberArray);
+      const body = document.querySelector("body");
+      body.append(pElement);
     };
   }
 
-
-//UI Logic
-
 window.addEventListener("load", function() {
-  const form = document.getElementById("number-input");
-  form.addEventListener("submit", theNeighborhood);
-  
+  document.querySelector("form").addEventListener("submit", handleTheNeighborhood);
 })
