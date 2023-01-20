@@ -1,4 +1,8 @@
 //Utility Logic
+function returnInput(number) {
+  return parseInt(number);
+}
+
 function isNegative(number) {
   if (number < 0) {
     return true; 
@@ -72,11 +76,7 @@ function mrRogersEquation(number) {
   }
 }
 
-//UI Logic
-
-function handleTheNeighborhood(event) {
-  event.preventDefault();
-  let integer = document.querySelector("input#numberInput");
+function theNeighborhood(integer) {
   if (isNegative(integer)) {
     return "Please Enter a Number Greater Than 0."
   } else {
@@ -99,13 +99,14 @@ function handleTheNeighborhood(event) {
         }
         }
       });
-      const pElement = document.createElement("p");
-      pElement.append(finalNumberArray);
-      const body = document.querySelector("body");
-      body.append(pElement);
+      return finalNumberArray;
     };
   }
 
+
+//UI Logic
+
 window.addEventListener("load", function() {
-  document.querySelector("form").addEventListener("submit", handleTheNeighborhood);
+  const form = document.getElementById("number-input");
+  form.addEventListener("submit", theNeighborhood)
 })
