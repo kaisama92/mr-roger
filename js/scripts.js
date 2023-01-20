@@ -109,8 +109,13 @@ function theNeighborhood(integer) {
 function handleTheNeighborhood(event) {
   event.preventDefault();
   let input = parseInt(document.getElementById("numberInput").value);
-  let output = theNeighborhood(input);
+  let output;
+  if (isNegative(input) || input === 0) {
+    output = "Please enter number greater than or equal to 0.";
+  } else {
+    output = theNeighborhood(input);
   output = output.join(", ");
+  };
   document.getElementById("output").innerText = output;
 }
 
