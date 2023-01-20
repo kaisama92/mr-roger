@@ -106,7 +106,15 @@ function theNeighborhood(integer) {
 
 //UI Logic
 
+function handleTheNeighborhood(event) {
+  event.preventDefault();
+  let input = parseInt(document.getElementById("numberInput").value);
+  let output = theNeighborhood(input);
+  output = output.join(", ");
+  document.getElementById("output").innerText = output;
+}
+
 window.addEventListener("load", function() {
   const form = document.getElementById("number-input");
-  form.addEventListener("submit", theNeighborhood)
+  form.addEventListener("submit", handleTheNeighborhood)
 })
