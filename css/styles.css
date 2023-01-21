@@ -1,0 +1,25 @@
+body {
+  background: url(https://i0.wp.com/www.kidsburgh.org/wp-content/uploads/2019/11/MR-Mister-Rogers-Puppets_Photo-Credit-The-Fred-Rogers-Company-002.jpg?w=600&ssl=1) no-repeat center fixed;
+  background-size: cover;
+  
+}
+
+img {
+  width: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.centered {
+  text-align: center;
+  background-color: bisque;
+  padding: 5px;
+  border: 5px solid black;
+}
+
+#output {
+  background-color: bisque;
+  padding: 5px;
+  margin: 15px;
+}

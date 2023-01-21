@@ -3,20 +3,25 @@
 
   <head>
     <script src="js/scripts.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css" type="text/css">
     <title>Mr. Roger</title>
   </head>
 
   <body>
-    <h1>Welcome to the neighborhood!</h1>
-    <h4>The input below will designate a number to count to when you press 'submit'. You will find that when the numbers are generated below, an equation replaces some of the numbers with phrases. Can you figure out what the rules of replacement are?</h4>
-    <form id="number-input">
+    <h1 class="centered">Welcome to the neighborhood!</h1>
+    <h4 class="centered">The input below will designate a number to count to when you press 'submit'. You will find that when the numbers are generated below, an equation replaces some of the numbers with phrases. Can you figure out what the rules of replacement are?</h4>
+
+    <form id="number-input" class="centered">
       <label name="numberInput">Count To: </label>
       <input id="numberInput" type="number">
       <button type="submit">Submit</button>
     </form>
+
     <br>
+
+    <!-- <div class="img"> -->
+      <img class="centered" src="https://phs-app-media.s3.amazonaws.com/s3fs-public/ds3442_edit.jpg" alt="Picture of Mr. Rogers.">
+    <!-- </div> -->
 
     <h2>Output: </h2>
     <p id="output"></p>
